@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "jenkins": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-jenkins"],
+      "env": {
+        "JENKINS_URL": "https://your-jenkins-server.com",
+        "JENKINS_USER": "your-username",
+        "JENKINS_TOKEN": "your-api-token-here"
+      },
+      "disabled": false,
+      "autoApprove": [
+        "jenkins_get_build_status",
+        "jenkins_list_jobs",
+        "jenkins_get_build_log",
+        "jenkins_get_pipeline_stages",
+        "jenkins_get_artifacts",
+        "jenkins_get_build_history"
+      ]
+    }
+  }
+}
